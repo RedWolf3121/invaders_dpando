@@ -13,14 +13,17 @@ public class Ship {
     }
 
     Vector2 position;
+    float speed = 5;
 
     State state;
     float stateTime;
-    float speed = 5;
 
     TextureRegion frame;
 
     Weapon weapon;
+
+    int life = 3;
+    int points;
 
     Ship(int initialPosition){
         position = new Vector2(initialPosition, 10);
@@ -98,6 +101,6 @@ public class Ship {
     }
 
     public void damage() {
-
+        life--;
     }
 }

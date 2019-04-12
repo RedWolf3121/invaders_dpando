@@ -2,10 +2,10 @@ package com.mygdx.game;
 
 public class Timer {
     float time;
-    float max;
+    float limit;
 
-    public Timer(float max){
-        this.max = max;
+    public Timer(float limit){
+        this.limit = limit;
     }
 
     public void update(float delta){
@@ -13,14 +13,14 @@ public class Timer {
     }
 
     public boolean check(){
-        if(time >= max){
+        if(time >= limit){
             time = 0;
             return true;
         }
         return false;
     }
 
-    public void set(float max){
-        this.max = max;
+    public void set(float limit){
+        this.limit = limit;
     }
 }

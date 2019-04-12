@@ -37,6 +37,7 @@ public class GameScreen extends SpaceInvadersScreen {
 
     @Override
     public void render(float delta) {
+//        System.out.println(1/delta);  // Mostrar FPS
         spriteBatch.setProjectionMatrix(camera.combined);
 
         world.render(delta, spriteBatch, assets);

@@ -16,6 +16,7 @@ public class Alien {
     TextureRegion frame;
     State state;
 
+
     public Alien(int x, int y) {
         position = new Vector2(x, y);
         state = State.LIVE;
