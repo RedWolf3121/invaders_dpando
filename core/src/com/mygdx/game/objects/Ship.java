@@ -103,4 +103,5 @@ public class Ship {
     public void damage() {
         life--;
     }
+
 }

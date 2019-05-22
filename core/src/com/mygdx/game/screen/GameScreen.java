@@ -41,6 +41,7 @@ public class GameScreen extends SpaceInvadersScreen {
         spriteBatch.setProjectionMatrix(camera.combined);
 
         world.render(delta, spriteBatch, assets);
+        world.checkLifeShip(spriteBatch);
     }
 
     @Override

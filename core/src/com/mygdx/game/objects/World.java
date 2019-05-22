@@ -1,5 +1,6 @@
 package com.mygdx.game.objects;
 
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.Rectangle;
@@ -12,6 +13,7 @@ public class World {
     HUD hud;
 
 
+    BitmapFont bitmapFont;
     int WORLD_WIDTH, WORLD_HEIGHT;
 
     public World(int WORLD_WIDTH, int WORLD_HEIGHT){
@@ -38,6 +40,7 @@ public class World {
         batch.end();
     }
 
+
     void update(float delta, Assets assets){
         space.update(delta, assets);
         ship.update(delta, assets);
@@ -62,8 +65,13 @@ public class World {
             if (Intersector.overlaps(shootRectangle, shipRectangle)) {
                 ship.damage();
                 shoot.remove();
-
             }
+        }
+    }
+
+    public void checkLifeShip(SpriteBatch spriteBatch) {
+        if (ship.life <= 0) {
+
         }
     }
 

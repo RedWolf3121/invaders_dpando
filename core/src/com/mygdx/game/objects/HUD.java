@@ -21,6 +21,8 @@ public class HUD {
         bitmapFont.draw(batch, "Level: " + alienArmy.levelArmy, 20, 50);
         if (alienArmy.gameOver) {
             bitmapFont.draw(batch, "WINNER !!", 200, 200);
+        } else if (ship.life <= 0) {
+            bitmapFont.draw(batch, "GAME OVER, U LOSE", 200, 200);
         }
     }
 }
